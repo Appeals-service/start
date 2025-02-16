@@ -22,7 +22,7 @@ services:
 
   broker:
     container_name: broker
-    image: rabbitmq:4.0.5-management
+    image: rabbitmq:4.0.5
     healthcheck:
       test: rabbitmq-diagnostics -q ping
       interval: 3s
