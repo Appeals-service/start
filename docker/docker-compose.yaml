@@ -52,6 +52,15 @@ services:
     networks:
       - app_network
 
+  cache_storage:
+    image: redis:latest
+    container_name: redis
+    restart: unless-stopped
+    expose:
+      - 6379
+    networks:
+      - app_network
+
   auth_service:
     container_name: auth_service
     build: https://github.com/Appeals-service/Authorization_service.git
